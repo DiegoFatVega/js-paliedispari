@@ -11,13 +11,16 @@ function isPalindrome (word){
     let reversedWord = '';
     for(let i = word.length - 1; i >= 0; i --){
         const char = word[i];
-        reversedWord = reversedWord + char;
+        //faccio il confronto tra la prima variabile e la seconda con la prima parola pero invertita
+        reversedWord = reversedWord + char;  
     }
-    return reversedWord;
+    //se sono ugali, stampo il messaggio "è palindroma", altrimenti "non è palindroma"
+        if(word === reversedWord){
+            return 'la parola inserita è palindroma'
+        }else 
+            return 'la parola inserita NON è palindroma' 
 }
 
 const reversedWord = isPalindrome(word)
 console.log(reversedWord);
-//faccio il confronto tra la prima variabile e la seconda con la prima parola pero invertita
 
-//se sono ugali, stampo il messaggio "è palindroma", altrimenti "non è palindroma"
